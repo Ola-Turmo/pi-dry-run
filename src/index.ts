@@ -28,7 +28,7 @@ const BASH_DANGEROUS_PATTERNS: Array<{ pattern: RegExp; label: string }> = [
   { pattern: /rm\s+-[rfvx]+\s+\//, label: "recursive rm at root" },
   { pattern: /rm\s+-[rfvx]+\s+\.\//, label: "recursive rm in current dir" },
   { pattern: /sudo\s+/i, label: "sudo command" },
-  { pattern: /kill\s+-\d/, label: "kill with signal" },
+  { pattern: /kill\s+-\d+/, label: "kill with signal" },
   { pattern: /dd\s+/i, label: "dd command (raw disk)" },
   { pattern: /^>\s*\/dev\//i, label: "redirect to device" },
   { pattern: /mkfs/i, label: "mkfs (filesystem wipe)" },
